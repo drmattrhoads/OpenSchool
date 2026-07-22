@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #fbfaf7;
+  --paper-raised: #ffffff;
+  --ink: #1c2733;
+  --ink-soft: #4a5a6a;
+  --ink-faint: #7d8b99;
+  --line: #dfe3e0;
+
+  --accent: #0e7a5f;
+  --accent-soft: #e3f0ea;
+  --accent-ink: #0a5a46;
+
+  --amber: #b97718;
+  --amber-soft: #f7ecd9;
+  --amber-ink: #8f5c10;
+
+  --blue: #2b6cb0;
+  --blue-soft: #e2ecf7;
+  --blue-ink: #1f5488;
+
+  --plum: #7c4d8f;
+  --plum-soft: #f0e6f4;
+  --plum-ink: #5f3a6f;
+
+  --code-bg: #f1f3ef;
+  --focus-ring: #0e7a5f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #141a1f;
+    --paper-raised: #1c242c;
+    --ink: #e8ecef;
+    --ink-soft: #b5c0ca;
+    --ink-faint: #8494a1;
+    --line: #2c3843;
+
+    --accent: #3fb992;
+    --accent-soft: #17352b;
+    --accent-ink: #7cd9b7;
+
+    --amber: #e0a44a;
+    --amber-soft: #3a2d16;
+    --amber-ink: #f0c07a;
+
+    --blue: #6aa5e0;
+    --blue-soft: #1a2c40;
+    --blue-ink: #9bc4ec;
+
+    --plum: #b98acb;
+    --plum-soft: #33243b;
+    --plum-ink: #d4aee0;
+
+    --code-bg: #1e272f;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #141a1f;
+  --paper-raised: #1c242c;
+  --ink: #e8ecef;
+  --ink-soft: #b5c0ca;
+  --ink-faint: #8494a1;
+  --line: #2c3843;
+  --accent: #3fb992;
+  --accent-soft: #17352b;
+  --accent-ink: #7cd9b7;
+  --amber: #e0a44a;
+  --amber-soft: #3a2d16;
+  --amber-ink: #f0c07a;
+  --blue: #6aa5e0;
+  --blue-soft: #1a2c40;
+  --blue-ink: #9bc4ec;
+  --plum: #b98acb;
+  --plum-soft: #33243b;
+  --plum-ink: #d4aee0;
+  --code-bg: #1e272f;
+}
+
+:root[data-theme="light"] {
+  --paper: #fbfaf7;
+  --paper-raised: #ffffff;
+  --ink: #1c2733;
+  --ink-soft: #4a5a6a;
+  --ink-faint: #7d8b99;
+  --line: #dfe3e0;
+  --accent: #0e7a5f;
+  --accent-soft: #e3f0ea;
+  --accent-ink: #0a5a46;
+  --amber: #b97718;
+  --amber-soft: #f7ecd9;
+  --amber-ink: #8f5c10;
+  --blue: #2b6cb0;
+  --blue-soft: #e2ecf7;
+  --blue-ink: #1f5488;
+  --plum: #7c4d8f;
+  --plum-soft: #f0e6f4;
+  --plum-ink: #5f3a6f;
+  --code-bg: #f1f3ef;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --color-amber-ink: var(--amber-ink);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-blue-ink: var(--blue-ink);
+  --color-plum: var(--plum);
+  --color-plum-soft: var(--plum-soft);
+  --color-plum-ink: var(--plum-ink);
+  --color-code-bg: var(--code-bg);
+  --font-sans: var(--font-body);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), "Segoe UI", -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+  font-weight: 800;
+}
+
+button, a, input, select {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}
