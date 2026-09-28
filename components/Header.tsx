@@ -10,6 +10,9 @@ export function Header() {
   const { ui } = useLanguage();
   const pathname = usePathname();
 
+  // Teacher tools have their own header (app/tools/layout.tsx).
+  if (pathname.startsWith("/tools")) return null;
+
   const links = [
     { href: "/", label: ui.home, icon: Home },
     { href: "/careers", label: ui.careers, icon: Briefcase },
